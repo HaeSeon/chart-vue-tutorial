@@ -1,6 +1,6 @@
 <template>
     <div>
-        <canvas id="myChart"></canvas>
+        <canvas id="pieChart"></canvas>
     </div>
 </template>
 
@@ -11,13 +11,17 @@ import { Chart, registerables } from "chart.js";
 export default Vue.extend({
     data: () => ({
         data: {
-            labels: ["January", "February", "March", "April", "May", "June"],
+            labels: ["Red", "Blue", "Yellow"],
             datasets: [
                 {
                     label: "My First dataset",
-                    backgroundColor: "rgb(255, 99, 132)",
-                    borderColor: "rgb(255, 99, 132)",
-                    data: [0, 10, 5, 2, 20, 30, 45],
+                    backgroundColor: [
+                        "rgb(255, 99, 132)",
+                        "rgb(54, 162, 235)",
+                        "rgb(255, 205, 86)",
+                    ],
+                    hoverOffset: 4,
+                    data: [300, 50, 100],
                 },
             ],
         },
@@ -26,11 +30,11 @@ export default Vue.extend({
         renderChart() {
             const { labels, datasets } = this.data;
             const $chart = document.getElementById(
-                "myChart"
+                "pieChart"
             ) as HTMLCanvasElement;
             new Chart($chart, {
                 data: { datasets, labels },
-                type: "line",
+                type: "pie",
             });
         },
     },

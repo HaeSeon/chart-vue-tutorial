@@ -1,16 +1,19 @@
 <template>
     <div>
         <line-chart />
+        <pie-chart />
     </div>
 </template>
 
 <script lang="ts">
 import LineChart from "./components/LineChart.vue";
+import PieChart from "./components/pieChart.vue";
 
 export default {
     name: "App",
     components: {
         LineChart,
+        PieChart,
     },
 };
 </script>
