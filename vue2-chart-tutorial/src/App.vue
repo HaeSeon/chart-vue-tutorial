@@ -2,10 +2,12 @@
     <div>
         <line-chart />
         <pie-chart />
+        <bar-chart />
     </div>
 </template>
 
 <script lang="ts">
+import BarChart from "./components/barChart.vue";
 import LineChart from "./components/LineChart.vue";
 import PieChart from "./components/pieChart.vue";
 
@@ -14,6 +16,7 @@ export default {
     components: {
         LineChart,
         PieChart,
+        BarChart,
     },
 };
 </script>
