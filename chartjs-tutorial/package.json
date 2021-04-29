@@ -1,18 +1,19 @@
 {
-  "name": "chartjs-tutorial",
-  "version": "1.0.0",
-  "description": "",
-  "main": "chart.js",
-  "dependencies": {
-    "chart.js": "^3.1.1"
-  },
-  "devDependencies": {
-    "typescript": "^4.2.4"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "chartjs-tutorial",
+    "version": "1.0.0",
+    "description": "",
+    "main": "ggant.js",
+    "dependencies": {
+        "chart.js": "^3.1.1"
+    },
+    "devDependencies": {
+        "typescript": "^4.2.4"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module"
 }

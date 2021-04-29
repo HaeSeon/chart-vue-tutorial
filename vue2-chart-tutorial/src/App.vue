@@ -1,5 +1,6 @@
 <template>
     <div>
+        <ggant-chart />
         <line-chart />
         <pie-chart />
         <bar-chart />
@@ -7,9 +8,10 @@
 </template>
 
 <script lang="ts">
-import BarChart from "./components/barChart.vue";
+import BarChart from "./components/BarChart.vue";
+import GgantChart from "./components/GanttChart.vue";
 import LineChart from "./components/LineChart.vue";
-import PieChart from "./components/pieChart.vue";
+import PieChart from "./components/PieChart.vue";
 
 export default {
     name: "App",
@@ -17,6 +19,7 @@ export default {
         LineChart,
         PieChart,
         BarChart,
+        GgantChart,
     },
 };
 </script>
