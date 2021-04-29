@@ -1,6 +1,7 @@
 // TODO : cdn 파일에서 불러올 방법
 // 현재 index.html 에서 불러오고있음
 // require("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.js");
+import moment from "moment";
 export function renderChart($el, labels, starts, lengths) {
     var barOptions_stacked = {
         hover: {
@@ -10,16 +11,31 @@ export function renderChart($el, labels, starts, lengths) {
             xAxes: [
                 {
                     label: "Duration",
+                    type: "time",
+                    time: {
+                        unit: "day",
+                        displayFormats: {
+                            day: "YY MMM D",
+                        },
+                    },
                     ticks: {
-                        beginAtZero: true,
+                        min: "01-01-2021",
+                        max: moment().add(1, "days"),
+                        fontSize: 10,
                         fontFamily: "'Open Sans Bold', sans-serif",
-                        fontSize: 11,
                     },
                     scaleLabel: {
                         display: false,
+                        labelString: "Day",
                     },
                     gridLines: {},
                     stacked: true,
+                    type: "time",
+                    time: {
+                        displayFormats: {
+                            quarter: "MMM YYYY",
+                        },
+                    },
                 },
             ],
             yAxes: [
