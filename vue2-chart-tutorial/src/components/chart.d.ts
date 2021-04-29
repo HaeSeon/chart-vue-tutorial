@@ -1,6 +1,8 @@
+import { Moment } from "moment";
+
 export function renderChart(
     $el: HTMLCanvasElement,
     labels: string[],
-    starts: number[],
+    starts: Moment[],
     lengths: number[]
 ): void;

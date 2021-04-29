@@ -1,7 +1,7 @@
-// import { Chart } from "chart.js";
-// var Chart = window.Chart;
+// TODO : cdn 파일에서 불러올 방법
+// 현재 index.html 에서 불러오고있음
+// require("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.js");
 export function renderChart($el, labels, starts, lengths) {
-    console.log(Chart);
     var barOptions_stacked = {
         hover: {
             animationDuration: 10,
@@ -60,7 +60,12 @@ export function renderChart($el, labels, starts, lengths) {
                 {
                     // data: [100, 100, 200, 200, 100],
                     data: lengths,
-                    backgroundColor: ["red", "green", "blue", "yellow"],
+                    backgroundColor: [
+                        "#00bfb3",
+                        "#00488f",
+                        "#f4ee7e",
+                        "#b592aa",
+                    ],
                 },
             ],
         },
